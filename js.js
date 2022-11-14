@@ -1,10 +1,12 @@
-let pokemon = document.getElementById('pokemon');
-let pokemon2 = document.getElementById('pokemon2');
-let pokemon3 = document.getElementById('pokemon3');
+let select = document.getElementById('select');
+let select2 = document.getElementById('select2');
+let select3 = document.getElementById('select3');
 let pokeElejido = document.getElementById('elejido');
-pokemon.addEventListener('click', discheck1);
-pokemon2.addEventListener('click', discheck2);
-pokemon3.addEventListener('click', discheck3);
+
+select.addEventListener('click', discheck1);
+select2.addEventListener('click', discheck2);
+select3.addEventListener('click', discheck3);
+
 pokeElejido.addEventListener('click', elejiste);
 
 class Selectores{
@@ -20,35 +22,35 @@ let ratata = new Selectores('ratata',100,20,'Rattata.png');
 console.log(ratata)
 
 function discheck1(){
-    if(pokemon.checked == true){
-        pokemon2.checked = false;
-        pokemon3.checked = false;
+    if(select.checked == true){
+        select2.checked = false;
+        select3.checked = false;
 
     }
 }
 function discheck2(){
-    if(pokemon2.checked == true){
-        pokemon.checked = false;
-        pokemon3.checked = false;
+    if(select2.checked == true){
+        select.checked = false;
+        select3.checked = false;
 
     }
 }
 function discheck3(){
-    if(pokemon3.checked == true){
-        pokemon2.checked = false;
-        pokemon.checked = false;
+    if(select3.checked == true){
+        select2.checked = false;
+        select.checked = false;
 
     }
 }
 
 
 function elejiste(){
-    if(pokemon.checked == true){
-        alert(pokemon.value);
-    }else if(pokemon2.checked == true){
-        alert(pokemon2.value);
-    }else if(pokemon3.checked == true){
-        alert(pokemon3.value);
+    if(select.checked == true){
+        alert(select.value);
+    }else if(select2.checked == true){
+        alert(select2.value);
+    }else if(select3.checked == true){
+        alert(select3.value);
     }
     else{
         alert('eleccion no valida');
