@@ -19,7 +19,7 @@ class Selectores{
 }
 let ratata = new Selectores('ratata',100,20,'Rattata.png');
 
-console.log(ratata)
+
 
 function discheck1(){
     if(select.checked == true){
