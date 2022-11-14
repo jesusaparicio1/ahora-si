@@ -2,14 +2,22 @@ let pokemon = document.getElementById('pokemon');
 let pokemon2 = document.getElementById('pokemon2');
 let pokemon3 = document.getElementById('pokemon3');
 let pokeElejido = document.getElementById('elejido');
-
 pokemon.addEventListener('click', discheck1);
 pokemon2.addEventListener('click', discheck2);
 pokemon3.addEventListener('click', discheck3);
-
-
-
 pokeElejido.addEventListener('click', elejiste);
+
+class Selectores{
+    constructor(nombre,vida,ataque,foto){
+        this.nombre = nombre
+        this.vida = vida
+        this.ataque = ataque
+        this.foto = foto
+    }
+}
+let ratata = new Selectores('ratata',100,20,'Rattata.png');
+
+console.log(ratata)
 
 function discheck1(){
     if(pokemon.checked == true){
@@ -46,3 +54,4 @@ function elejiste(){
         alert('eleccion no valida');
     }
 }
+
